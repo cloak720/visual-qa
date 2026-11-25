@@ -1,0 +1,22 @@
+{
+  "name": "visual-qa-scripts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Screenshot capture and deterministic UI checks for the visual-qa skill",
+  "type": "module",
+  "scripts": {
+    "capture": "node capture.mjs",
+    "setup": "npm ci && npx playwright install chromium",
+    "test": "node --test test/security.test.mjs",
+    "audit": "npm audit --omit=dev"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "pixelmatch": "^6.0.0",
+    "playwright": "^1.48.0",
+    "pngjs": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
